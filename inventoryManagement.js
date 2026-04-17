@@ -1,6 +1,23 @@
 // Write your code here
+//inventory array
+let products = ["Laptop", "Phone", "Headphones", "Monitor"];
 
+//access product information
+function logFirstProduct() {
+  console.log(products[0]);
+}
 
+function updateProductName(position, newName) {
+  products[position] = newName;
+}
+
+function addProduct(newProduct) {
+  products.push(newProduct);
+}
+
+function removeLastProduct() {
+  products.pop();
+}
 
 // Export the necessary parts for testing
 module.exports = {
@@ -10,3 +27,4 @@ module.exports = {
   removeLastProduct: typeof removeLastProduct !== 'undefined' ? removeLastProduct : undefined,
   products
 };
+
